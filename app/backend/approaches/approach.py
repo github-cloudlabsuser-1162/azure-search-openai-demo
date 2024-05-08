@@ -27,6 +27,16 @@ from openai import AsyncOpenAI
 from core.authentication import AuthenticationHelper
 from text import nonewlines
 
+# This file contains the Approach class, which is the base class for all approaches.
+# The Approach class contains the following methods:
+# - __init__: Initializes the Approach class with the provided parameters.
+# - build_filter: Builds a filter based on the provided overrides and authentication claims.
+# - search: Searches for documents based on the provided parameters.
+# - get_sources_content: Gets the content of the sources for the search results.
+# - get_citation: Gets the citation for the source page.
+# - compute_text_embedding: Computes the text embedding for the provided query.
+# - compute_image_embedding: Computes the image embedding for the provided query.
+# - run: Runs the approach with the provided messages, stream, session state, and context.
 
 @dataclass
 class Document:
